@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Dedicated Songs 🎵❤️</title>
+
+<style>
+
+body{
+  font-family:Arial;
+  text-align:center;
+  padding-top:50px;
+  animation:bgchange 10s infinite alternate;
+  overflow-x:hidden;
+}
+
+@keyframes bgchange{
+  0%{background:#ffe6f0;}
+  50%{background:#ffd6ff;}
+  100%{background:#e6ccff;}
+}
+
+h1{
+  color:#ff4da6;
+  font-size:40px;
+  margin-bottom:40px;
+}
+
+.song-container{
+  background:#ffb3d9;
+  margin:20px auto;
+  padding:20px;
+  border-radius:20px;
+  width:70%;
+  color:white;
+  box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+audio{
+  width:100%;
+  margin-top:10px;
+  border-radius:10px;
+}
+
+/* HEART RAIN */
+
+.heart{
+  position:fixed;
+  top:-10px;
+  font-size:24px;
+  animation:fall linear infinite;
+}
+
+@keyframes fall{
+  0%{transform:translateY(-10vh);}
+  100%{transform:translateY(110vh);}
+}
+
+button:hover{
+  transform: scale(1.2) rotate(-5deg);
+  box-shadow: 0 12px 20px rgba(0,0,0,0.5);
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>These Songs Are For You 🎵❤️</h1>
+
+<div class="song-container">
+<p>Until I Found You <br>I WOULD,RATHER DIE THAN LET YOU GO JULIET TO UR ROMEO HOW I HEARD YOU SAY....</p>
+<audio controls>
+<source src="S1.mp3" type="audio/mpeg">
+</audio>
+</div>
+
+<div class="song-container">
+<p>Preet re <br>TERE SANG LAAGI JO PREET RE!!</p>
+<audio controls>
+<source src="S2.mp3" type="audio/mpeg">
+</audio>
+</div>
+
+<div class="song-container">
+<p>Raanjhanaa <br>ROUNAQEIN TUMHI SE MERI...KON TERE BIN MERA</p>
+<audio controls>
+<source src="S3.mp3" type="audio/mpeg">
+</audio>
+</div>
+
+<div class="song-container">
+<p>Blue <br>KNOW YOU'RE ALL THAT I WANT THIS LIFE...</p>
+<audio controls>
+<source src="S4.mp3" type="audio/mpeg">
+</audio>
+</div>
+
+<p>Every page was a little step to tell you… you’re special.</p>
+
+<div style="text-align:center; margin-top:50px;">
+  <a href="4.html.html" style="text-decoration:none;">
+    <button style="
+      background: linear-gradient(135deg, #ff9ce3, #ff66b3);
+      color: white;
+      font-size: 28px;
+      padding: 15px 30px;
+      border-radius: 50px;
+      border: 2px solid white;
+      cursor: pointer;
+      box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+      transition: all 0.3s ease;
+      font-weight:bold;
+    ">
+      ฅ^•ﻌ•^ฅ 
+    </button>
+  </a>
+</div>
+
+<script>
+
+/* HEART RAIN */
+
+function createHeart(){
+  let heart=document.createElement("div");
+  heart.className="heart";
+  heart.innerHTML="💖";
+  heart.style.left=Math.random()*100+"vw";
+  heart.style.animationDuration=(3+Math.random()*3)+"s";
+  document.body.appendChild(heart);
+
+  setTimeout(()=>{heart.remove();},6000);
+}
+
+setInterval(createHeart,300);
+
+</script>
+
+</body>
+</html>

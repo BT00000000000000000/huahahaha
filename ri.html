@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Memory Jar 🫙</title>
+
+<style>
+body{
+background: linear-gradient(to right,#fff1c9,#ffd6e7);
+text-align:center;
+font-family: Arial;
+padding-top:80px;
+}
+
+h1{
+font-size:40px;
+color:#ff4d88;
+}
+
+.jar{
+font-size:120px;
+cursor:pointer;
+}
+
+#note{
+margin-top:30px;
+font-size:24px;
+background:white;
+display:inline-block;
+padding:15px 25px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+display:none;
+animation: pop 0.6s ease;
+}
+
+@keyframes pop{
+0%{transform:scale(0);}
+100%{transform:scale(1);}
+}
+</style>
+</head>
+
+<body>
+
+<h1>Memory Jar 🫙</h1>
+
+<p>Click the jar 5 times to reveal somthing somthing ✨</p>
+
+<div class="jar" onclick="showNote()">🫙</div>
+
+<div id="note"></div>
+
+<script>
+let notes = [
+" your harkatein make me smile 🐥",
+" your make my day 💖",
+" you forgive me so easily and you never argue with me on stupid things 🌸",
+" you belive that i am the goddess ⭐",
+" i love when you talk about you your likes and dislikes and all 🍡"
+];
+
+function showNote(){
+let random = Math.floor(Math.random()*notes.length);
+document.getElementById("note").innerText = notes[random];
+document.getElementById("note").style.display="block";
+}
+</script>
+
+<div style="text-align:center; margin-top:50px;">
+  <a href="shooting.html" style="text-decoration:none;">
+    <button style="
+      background: linear-gradient(135deg, #ff9ce3, #ff66b3);
+      color: white;
+      font-size: 28px;
+      padding: 15px 30px;
+      border-radius: 50px;
+      border: 2px solid white;
+      cursor: pointer;
+      box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+      transition: all 0.3s ease;
+      font-weight:bold;
+    ">
+      ฅ^•ﻌ•^ฅ 
+    </button>
+  </a>
+</div>
+
+<style>
+button:hover{
+  transform: scale(1.2) rotate(-5deg);
+  box-shadow: 0 12px 20px rgba(0,0,0,0.5);
+}
+
+
+</body>
+</html>

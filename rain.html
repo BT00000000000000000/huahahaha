@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Spread Kindness</title>
+
+<style>
+body{
+background:linear-gradient(to right,#c9f9ff,#ffe0f0);
+text-align:center;
+font-family:Arial;
+padding-top:120px;
+overflow:hidden;
+}
+
+button{
+padding:15px 25px;
+font-size:20px;
+border:none;
+border-radius:25px;
+background:#ff4d88;
+color:white;
+cursor:pointer;
+}
+
+.heart{
+position:absolute;
+font-size:30px;
+animation: fall 4s linear infinite;
+}
+
+@keyframes fall{
+0%{transform:translateY(-100px);}
+100%{transform:translateY(100vh);}
+}
+
+#msg{
+margin-top:30px;
+font-size:24px;
+color:#ff2e7a;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Spread Kindness 💖</h1>
+
+<button onclick="rain()">Spread Kindness</button>
+
+<div id="msg"></div>
+
+<script>
+let messages=[
+"Your smile can brighten someone's day 😊",
+"You matter more than you think 💖",
+"Kindness makes the world better 🌍",
+"You are doing great ✨"
+];
+
+function rain(){
+for(let i=0;i<20;i++){
+let heart=document.createElement("div");
+heart.className="heart";
+heart.innerHTML="💖";
+heart.style.left=Math.random()*100+"vw";
+heart.style.animationDuration=(2+Math.random()*3)+"s";
+document.body.appendChild(heart);
+}
+
+let random=Math.floor(Math.random()*messages.length);
+document.getElementById("msg").innerText=messages[random];
+}
+</script>
+
+</body>
+</html>
